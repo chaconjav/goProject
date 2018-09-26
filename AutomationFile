@@ -1,0 +1,10 @@
+pipeline {
+    agent { docker { image 'golang:1.11.0-stretch' } }
+    stages {
+	stage('build') {
+	    steps {
+	        sh 'go version'
+	    }
+	}
+    }
+}
